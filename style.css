@@ -430,3 +430,7 @@ footer p {
   .page-heading h1 { font-size: 27px; }
   .hero-portrait { width: 170px; height: 170px; }
 }
+
+/* Professional project links without emoji arrows */
+.project-content a { text-decoration: none; }
+.project-content a:hover, .project-content a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
