@@ -40,6 +40,14 @@
       object-position: center;
       opacity: 0.35;
       display: block;
+      visibility: hidden; /* No Safari native play overlay while blocked */
+      pointer-events: none;
+    }
+
+    .homepage-video-area .video-background video::-webkit-media-controls,
+    .homepage-video-area .video-background video::-webkit-media-controls-start-playback-button {
+      display: none !important;
+      -webkit-appearance: none;
     }
 
     .homepage-video-area .video-background {
@@ -272,6 +280,60 @@
       .hero-copy h1 { font-size: 28px; }
     }
 
+    /* Mobile hero: final approved compact top-right portrait design. */
+    @media (max-width: 650px) {
+      .homepage-video-area .hero {
+        padding-top: 25px;
+        padding-bottom: 38px;
+      }
+      .homepage-video-area .hero .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .homepage-video-area .hero .hero-layout { position: relative; display: block; }
+      .hero-copy {
+        padding-top: 119px;
+      }
+      .hero-copy .eyebrow {
+        top: 2px;
+        left: 0;
+        width: calc(100% - 123px);
+        font-size: 11px !important;
+        letter-spacing: .3px;
+        line-height: 1.52 !important;
+      }
+      .hero-portrait {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 112px;
+        height: 112px;
+        border: 3px solid #b9ed48;
+        box-shadow: 0 5px 16px rgba(0,0,0,.3);
+      }
+      .hero-copy h1 {
+        font-size: clamp(30px, 7.4vw, 35px);
+        line-height: 1.18;
+        margin: 16px 0 23px;
+        letter-spacing: -.3px;
+      }
+      .hero-copy p:not(.eyebrow) {
+        font-size: 16px;
+        line-height: 1.66;
+        margin: 0 0 19px;
+      }
+      .hero-copy .btn {
+        margin-top: 5px;
+        padding: 12px 21px;
+      }
+    }
+    @media (max-width: 380px) {
+      .hero-copy { padding-top: 115px; }
+      .hero-portrait { width: 103px; height: 103px; }
+      .hero-copy .eyebrow { width: calc(100% - 111px); font-size: 10px !important; }
+      .hero-copy h1 { font-size: 29px; }
+    }
+
     /* =========================================
        REDUCED MOTION ACCESSIBILITY
     ========================================= */
@@ -328,7 +390,7 @@
 
     <div class="video-background">
 
-      <video id="engineering-hero-video" autoplay muted loop playsinline webkit-playsinline
+      <video id="engineering-hero-video" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback
              preload="auto" poster="engineering-background-poster.jpg" aria-hidden="true">
 
         <source

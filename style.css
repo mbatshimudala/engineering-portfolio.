@@ -383,8 +383,8 @@ footer p {
     width: 44px;
     height: 44px;
     border: 1px solid rgba(255,255,255,.45);
-    border-radius: 7px;
-    background: transparent;
+    border-radius: 10px;
+    background: rgba(255,255,255,.03);
     color: white;
     font-size: 25px;
     cursor: pointer;
@@ -403,8 +403,8 @@ footer p {
   .nav-links.is-open { display: flex; }
   .nav-links a { display: block; padding: 10px 2px; font-size: 16px; }
   .hero { padding: 48px 0 45px; }
-  .hero h1 { font-size: clamp(29px, 8vw, 36px); line-height: 1.17; margin: 20px 0; }
-  .hero p { font-size: 16px; line-height: 1.65; }
+  .hero h1 { font-size: clamp(29px, 8vw, 36px); line-height: 1.14; margin: 18px 0 20px; }
+  .hero p { font-size: 16px; line-height: 1.62; }
   .eyebrow { font-size: 12px !important; letter-spacing: .7px; line-height: 1.6 !important; }
   .page-heading { padding: 42px 0 45px; }
   .page-heading h1 { font-size: clamp(28px, 7.5vw, 34px); line-height: 1.23; overflow-wrap: break-word; }
@@ -418,7 +418,7 @@ footer p {
   .card { padding: 20px; }
   .project-card { padding: 0; }
   .project-content { padding: 19px; }
-  .btn { max-width: 100%; text-align: center; }
+  .btn { max-width: 100%; text-align: center; border-radius: 8px; padding: 14px 22px; }
   img, video { max-width: 100%; }
   .homepage-video-area .hero .hero-layout { gap: 26px; }
   .hero-portrait { width: 185px; height: 185px; flex-basis: auto; }
