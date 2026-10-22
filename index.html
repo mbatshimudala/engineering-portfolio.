@@ -112,6 +112,29 @@
     }
 
 
+    /* DESKTOP ONLY: more connected, higher and clearer portrait.
+       Keep tablet and approved phone composition completely unchanged. */
+    @media (min-width: 901px) {
+      .homepage-video-area .hero .hero-layout {
+        gap: 28px;
+        align-items: center;
+      }
+      .homepage-video-area .hero .hero-copy {
+        flex: 1 1 auto;
+        max-width: 690px;
+      }
+      .homepage-video-area .hero .hero-portrait {
+        flex: 0 0 310px;
+        width: 310px;
+        height: 310px;
+        transform: translateY(-25px);
+        border-width: 5px;
+        box-shadow:
+          0 0 0 17px rgba(5, 27, 22, .35),
+          0 12px 46px 24px rgba(1, 16, 13, .46);
+      }
+    }
+
     /* =========================================
        PROJECT SECTION HEADINGS
     ========================================= */
