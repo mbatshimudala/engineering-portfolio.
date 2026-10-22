@@ -354,3 +354,79 @@ footer p {
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
+
+
+/* MOBILE REFINEMENTS: desktop styles above remain unchanged */
+.mobile-menu-toggle { display: none; }
+@media (max-width: 750px) {
+  html { -webkit-text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  .container { padding-left: 20px; padding-right: 20px; }
+  header nav.container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    min-height: 70px;
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+  }
+  .logo {
+    font-size: clamp(15px, 4vw, 18px);
+    line-height: 1.35;
+    overflow-wrap: normal;
+  }
+  .mobile-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 7px;
+    background: transparent;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .mobile-menu-toggle:focus-visible, .nav-links a:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+  .nav-links {
+    display: none;
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,.18);
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-links a { display: block; padding: 10px 2px; font-size: 16px; }
+  .hero { padding: 48px 0 45px; }
+  .hero h1 { font-size: clamp(29px, 8vw, 36px); line-height: 1.17; margin: 20px 0; }
+  .hero p { font-size: 16px; line-height: 1.65; }
+  .eyebrow { font-size: 12px !important; letter-spacing: .7px; line-height: 1.6 !important; }
+  .page-heading { padding: 42px 0 45px; }
+  .page-heading h1 { font-size: clamp(28px, 7.5vw, 34px); line-height: 1.23; overflow-wrap: break-word; }
+  .page-heading p { font-size: 16px; line-height: 1.6; margin: 17px 0 0; }
+  .section { padding: 40px 0; }
+  h2 { font-size: 26px; line-height: 1.25; margin-bottom: 20px; }
+  h3 { font-size: 20px; line-height: 1.35; }
+  p, li { font-size: 16px; line-height: 1.65; }
+  ul, ol { padding-left: 23px; }
+  .grid, .gallery { gap: 18px; }
+  .card { padding: 20px; }
+  .project-card { padding: 0; }
+  .project-content { padding: 19px; }
+  .btn { max-width: 100%; text-align: center; }
+  img, video { max-width: 100%; }
+  .homepage-video-area .hero .hero-layout { gap: 26px; }
+  .hero-portrait { width: 185px; height: 185px; flex-basis: auto; }
+}
+@media (max-width: 380px) {
+  .container { padding-left: 17px; padding-right: 17px; }
+  .logo { font-size: 14px; }
+  .hero h1 { font-size: 28px; }
+  .page-heading h1 { font-size: 27px; }
+  .hero-portrait { width: 170px; height: 170px; }
+}
