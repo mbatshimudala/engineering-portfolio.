@@ -367,20 +367,9 @@
         background: linear-gradient(90deg,rgba(2,24,19,.78),rgba(3,26,21,.63) 51%,rgba(3,27,22,.38));
         overflow: hidden;
       }
-      /* The subtle road detail is intentionally background decoration only. */
-      .homepage-video-area .hero::before {
-        content: "";
-        position: absolute;
-        z-index: 0;
-        pointer-events: none;
-        top: 145px;
-        bottom: 0;
-        right: 0;
-        width: 44%;
-        background: linear-gradient(90deg, #05251ee6 0%, #05251e0a 48%),
-          url("mobile-road-detail.jpg") center / cover no-repeat;
-        opacity: .63;
-      }
+      /* Clean blueprint backdrop only: removed road screenshot because
+         it contained text burned into the image. */
+      .homepage-video-area .hero::before { display: none; }
       .homepage-video-area .hero .container {
         padding-left: 19px;
         padding-right: 19px;
@@ -392,15 +381,15 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: clamp(110px,30vw,134px);
-        height: clamp(110px,30vw,134px);
+        width: clamp(94px,25vw,112px);
+        height: clamp(94px,25vw,112px);
         border: 4px solid #b8f23b;
         box-shadow: 0 5px 20px rgba(0,0,0,.31);
       }
       .hero-copy { width: 100%; padding-top: 0; }
       .hero-copy .eyebrow {
         position: static;
-        width: calc(100% - 129px);
+        width: calc(100% - 116px);
         min-height: 84px;
         margin: 0 0 1px;
         color: #c1f445 !important;
@@ -443,8 +432,8 @@
       header .mobile-menu-toggle { border-color: #b8f23b; }
     }
     @media (max-width: 380px) {
-      .hero-portrait { width: 106px; height: 106px; }
-      .hero-copy .eyebrow { width: calc(100% - 113px); font-size: 10px !important; min-height: 82px; }
+      .hero-portrait { width: 94px; height: 94px; }
+      .hero-copy .eyebrow { width: calc(100% - 104px); font-size: 10px !important; min-height: 82px; }
       .hero-copy h1 { font-size: clamp(30px,8.8vw,34px); }
     }
 
