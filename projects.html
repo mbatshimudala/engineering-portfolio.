@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Projects | Mbatshi Chris Jr Mudala</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* PROJECT CARDS */
+
+    .project-card {
+      overflow: hidden;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* PROJECT PHOTOGRAPHS */
+
+    .project-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    /* IMAGE HOVER EFFECT */
+
+    .project-image-wrapper {
+      overflow: hidden;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.04);
+    }
+
+    /* PROJECT DESCRIPTION */
+
+    .project-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .project-content p {
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    /* PROJECT LINKS */
+
+    .project-content a {
+      margin-top: auto;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* CARD HOVER EFFECT */
+
+    .project-card {
+      transition: transform 0.3s ease,
+                  box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+    }
+
+    /* PHOTO CREDITS */
+
+    .photo-credit {
+      font-size: 0.75rem;
+      color: #666;
+      margin-top: 12px;
+    }
+
+    /* RESPONSIVE IMAGES */
+
+    @media (max-width: 600px) {
+      .project-card img {
+        height: 190px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header>
+    <nav class="container">
+
+      <a class="logo" href="index.html">
+        MBATSHI CHRIS JR MUDALA
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- PAGE HEADING -->
+
+  <section class="page-heading">
+    <div class="container">
+
+      <h1>Engineering Projects</h1>
+
+      <p>
+        Selected construction, surveying and
+        geospatial projects.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- PROJECTS SECTION -->
+
+  <section class="section">
+    <div class="container">
+
+      <div class="grid">
+
+
+        <!-- PROJECT 1: M28 MOTORWAY -->
+
+        <article class="card project-card">
+
+          <div class="project-image-wrapper">
+
+            <img
+              src="https://m28.ie/app/uploads/2025/11/Ringaskiddy-Relief-Road-2.jpg"
+              alt="M28 Cork to Ringaskiddy road construction"
+              loading="lazy">
+
+          </div>
+
+          <div class="project-content">
+
+            <h3>
+              M28 Cork to Ringaskiddy Motorway
+            </h3>
+
+            <p>
+              Surveying, road construction verification
+              and machine control workflows.
+            </p>
+
+            <a href="project-m28.html">
+              View Project →
+            </a>
+
+            <span class="photo-credit">
+              Photograph: M28 Project Website
+            </span>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 2: ASTELLAS -->
+
+        <article class="card project-card">
+
+          <div class="project-image-wrapper">
+
+            <img
+              src="https://sisk.com/uploads/images/_width500px/DJI_20250418141120_0003_V_2025-07-09-112727_brkw.jpg"
+              alt="Astellas Pharmaceutical Facility construction"
+              loading="lazy">
+
+          </div>
+
+          <div class="project-content">
+
+            <h3>
+              Astellas Pharmaceutical Facility
+            </h3>
+
+            <p>
+              Survey support for mechanical installations,
+              equipment locations and drainage-related works.
+            </p>
+
+            <a href="project-astellas.html">
+              View Project →
+            </a>
+
+            <span class="photo-credit">
+              Photograph: Sisk
+            </span>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 3: KILLALOE BYPASS -->
+
+        <article class="card project-card">
+
+          <div class="project-image-wrapper">
+
+            <img
+              src="https://sisk.com/uploads/images/_width2600px/Sisk-Killaloe-Bridge-Span-lift-24th-April-2024-Pic-2.jpg"
+              alt="Killaloe Bypass bridge construction"
+              loading="lazy">
+
+          </div>
+
+          <div class="project-content">
+
+            <h3>
+              Killaloe Bypass &amp; R494 Upgrade
+            </h3>
+
+            <p>
+              Major road infrastructure project involving
+              engineering surveying, construction setting out
+              and verification of pavement geometry and elevations.
+            </p>
+
+            <a href="project-killaloe.html">
+              View Project →
+            </a>
+
+            <span class="photo-credit">
+              Photograph: Sisk
+            </span>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 4: GIS & DRONE SURVEYING -->
+
+        <article class="card project-card">
+
+          <div class="project-image-wrapper">
+
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/QGIS_screenshot.webp"
+              alt="Illustrative GIS mapping screenshot"
+              loading="lazy">
+
+          </div>
+
+          <div class="project-content">
+
+            <h3>
+              GIS &amp; Drone Surveying
+            </h3>
+
+            <p>
+              Digital mapping, UAV surveys,
+              topographical information and
+              spatial data processing.
+            </p>
+
+            <a href="project-gis.html">
+              View Project →
+            </a>
+
+            <span class="photo-credit">
+              Illustrative image: Wikideas1,
+              Wikimedia Commons (CC0)
+            </span>
+
+          </div>
+
+        </article>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Mbatshi Chris Jr Mudala |
+      Limerick, Ireland
+    </p>
+
+  </footer>
+
+</body>
+</html>

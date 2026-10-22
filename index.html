@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mbatshi Chris Jr Mudala | Civil Engineer</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* =========================================
+       VIDEO BACKGROUND - INTRODUCTION ONLY
+    ========================================= */
+
+    .homepage-video-area {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: #102d25;
+    }
+
+    .homepage-video-area .video-background {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .homepage-video-area .video-background video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.35;
+      display: block;
+    }
+
+    /* Green overlay for text readability */
+
+    .homepage-video-area .hero {
+      position: relative;
+      background: rgba(5, 30, 23, 0.45);
+    }
+
+    .homepage-video-area .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+
+    /* =========================================
+       HERO LAYOUT - TEXT AND PROFILE PICTURE
+    ========================================= */
+
+    .homepage-video-area .hero .hero-layout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .hero-copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* Circular profile photograph */
+
+    .hero-portrait {
+      flex: 0 0 270px;
+      width: 270px;
+      height: 270px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #b9ed69;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      background: #102d25;
+    }
+
+    /* MIRRORED PROFILE PHOTOGRAPH */
+
+    .hero-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
+
+      /* Flip photograph horizontally */
+      transform: scaleX(-1);
+    }
+
+
+    /* =========================================
+       PROJECT SECTION HEADINGS
+    ========================================= */
+
+    .project-group-heading {
+      margin-top: 30px;
+      margin-bottom: 22px;
+      font-size: 1.45rem;
+    }
+
+
+    /* =========================================
+       PROJECT CARDS
+    ========================================= */
+
+    .project-card {
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease,
+                  box-shadow 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .project-content p {
+      line-height: 1.6;
+    }
+
+    .project-content a {
+      display: inline-block;
+      margin-top: auto;
+      padding-top: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+
+    /* =========================================
+       ACADEMIC AND PERSONAL PROJECT CARD
+    ========================================= */
+
+    .academic-project {
+      border-left: 4px solid #9bd34e;
+      background: #f5f8f0;
+    }
+
+    .project-category {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #426536;
+      margin-bottom: 12px;
+    }
+
+
+    /* =========================================
+       TABLET RESPONSIVENESS
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+      .homepage-video-area .hero .hero-layout {
+        gap: 25px;
+      }
+
+      .hero-portrait {
+        flex-basis: 210px;
+        width: 210px;
+        height: 210px;
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE RESPONSIVENESS
+    ========================================= */
+
+    @media (max-width: 650px) {
+
+      .homepage-video-area .hero .hero-layout {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+      }
+
+      .hero-copy {
+        width: 100%;
+      }
+
+      .hero-portrait {
+        flex: 0 0 auto;
+        width: 210px;
+        height: 210px;
+        align-self: center;
+      }
+
+      .project-image {
+        height: 190px;
+      }
+
+    }
+
+
+    /* =========================================
+       REDUCED MOTION ACCESSIBILITY
+    ========================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .homepage-video-area video {
+        display: none;
+      }
+
+      .project-card {
+        transition: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =========================================
+       NAVIGATION
+  ========================================= -->
+
+  <header>
+    <nav class="container">
+
+      <a class="logo" href="index.html">
+        MBATSHI CHRIS JR MUDALA
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- =========================================
+       VIDEO INTRODUCTION SECTION
+  ========================================= -->
+
+  <div class="homepage-video-area">
+
+    <!-- Animated engineering background -->
+
+    <div class="video-background">
+
+      <video autoplay muted loop playsinline
+             preload="metadata">
+
+        <source
+          src="engineering-background-loop.mp4"
+          type="video/mp4">
+
+      </video>
+
+    </div>
+
+
+    <!-- HERO CONTENT -->
+
+    <section class="hero">
+
+      <div class="container hero-layout">
+
+        <!-- INTRODUCTION TEXT -->
+
+        <div class="hero-copy">
+
+          <p class="eyebrow">
+            Civil Engineering | Engineering Surveying |
+            Digital Construction
+          </p>
+
+          <h1>
+            Civil Engineering, Surveying &amp;
+            Digital Solutions
+          </h1>
+
+          <p>
+            I'm Mbatshi Chris Jr Mudala,
+            a Civil Engineer and Engineering Surveyor
+            based in Limerick, Ireland.
+          </p>
+
+          <p>
+            My experience includes road infrastructure,
+            construction surveying, drainage-related works,
+            machine control and geospatial technology.
+          </p>
+
+          <a class="btn" href="projects.html">
+            Explore My Projects
+          </a>
+
+        </div>
+
+
+        <!-- MIRRORED CIRCULAR PROFILE PHOTOGRAPH -->
+
+        <div class="hero-portrait">
+
+          <img
+            src="mbatshi.png"
+            alt="Mbatshi Chris Jr Mudala - Civil Engineer">
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- END OF VIDEO INTRODUCTION -->
+
+
+  <!-- =========================================
+       ABOUT ME
+  ========================================= -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <h2>About Me</h2>
+
+      <p>
+        I am a Civil Engineer with over five years
+        of combined experience in construction and
+        consulting engineering environments across
+        Ireland and Botswana.
+      </p>
+
+      <p>
+        My work involves interpreting engineering
+        drawings, preparing construction survey
+        information, establishing survey control,
+        verifying road levels, setting out and supporting
+        infrastructure construction.
+      </p>
+
+      <p>
+        Having previously worked in a consulting
+        engineering office early in my career, I am now looking to further
+        develop my experience in civil infrastructure
+        design, particularly roads and drainage
+        engineering.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       AREAS OF EXPERIENCE
+  ========================================= -->
+
+  <section class="section light">
+
+    <div class="container">
+
+      <h2>Areas of Experience</h2>
+
+      <div class="grid">
+
+        <!-- ROAD INFRASTRUCTURE -->
+
+        <div class="card">
+
+          <h3>Road Infrastructure</h3>
+
+          <p>
+            Road alignments, construction levels,
+            crossfalls, pavements, drainage
+            and engineering surveys.
+          </p>
+
+        </div>
+
+
+        <!-- ENGINEERING SURVEYING -->
+
+        <div class="card">
+
+          <h3>Engineering Surveying</h3>
+
+          <p>
+            GNSS, robotic total stations,
+            survey control, topographical surveys
+            and as-built verification.
+          </p>
+
+        </div>
+
+
+        <!-- DIGITAL CONSTRUCTION -->
+
+        <div class="card">
+
+          <h3>Digital Construction</h3>
+
+          <p>
+            Topcon machine control, LandXML,
+            TIN surfaces, RD3 workflows,
+            AutoCAD and GIS applications.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       SELECTED PROJECTS
+  ========================================= -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <h2>Selected Projects</h2>
+
+
+      <!-- PROFESSIONAL ENGINEERING PROJECTS -->
+
+      <h3 class="project-group-heading">
+        Professional Engineering Projects
+      </h3>
+
+      <div class="grid">
+
+
+        <!-- M28 MOTORWAY -->
+
+        <div class="card project-card">
+
+          <img
+            src="https://m28.ie/app/uploads/2025/11/Ringaskiddy-Relief-Road-2.jpg"
+            alt="M28 road construction project"
+            class="project-image"
+            loading="lazy">
+
+          <div class="project-content">
+
+            <h3>
+              M28 Cork to Ringaskiddy Motorway
+            </h3>
+
+            <p>
+              Road surveying, paving support
+              and machine control.
+            </p>
+
+            <a
+              href="https://m28.ie/"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Project ↗
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- KILLALOE BYPASS -->
+
+        <div class="card project-card">
+
+          <img
+            src="https://sisk.com/uploads/images/_width2600px/Sisk-Killaloe-Bridge-Span-lift-24th-April-2024-Pic-2.jpg"
+            alt="Killaloe Bypass bridge construction"
+            class="project-image"
+            loading="lazy">
+
+          <div class="project-content">
+
+            <h3>
+              Killaloe Bypass &amp; R494 Upgrade
+            </h3>
+
+            <p>
+              Road infrastructure and
+              engineering surveying.
+            </p>
+
+            <a
+              href="https://www.clarecoco.ie/roads-parking-and-travel/improvement-schemes-and-capital-projects/killaloe-bypassshannon-bridge-crossingr494-upgrade"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Project ↗
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- ASTELLAS PHARMACEUTICAL FACILITY -->
+
+        <div class="card project-card">
+
+          <img
+            src="https://sisk.com/uploads/images/_width500px/DJI_20250418141120_0003_V_2025-07-09-112727_brkw.jpg"
+            alt="Astellas pharmaceutical facility construction"
+            class="project-image"
+            loading="lazy">
+
+          <div class="project-content">
+
+            <h3>
+              Astellas Pharmaceutical Facility
+            </h3>
+
+            <p>
+              Engineering surveying, drainage levels
+              and construction verification.
+            </p>
+
+            <a
+              href="https://sisk.com/what-we-do/projects/astellas"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Project ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ACADEMIC AND PERSONAL DEVELOPMENT -->
+
+      <h3 class="project-group-heading">
+        Academic &amp; Personal Development
+      </h3>
+
+      <div class="grid">
+
+        <!-- GIS AND DRONE SURVEYING -->
+
+        <div class="card project-card academic-project">
+
+          <div class="project-content">
+
+            <p class="project-category">
+              Academic Coursework | Personal Projects
+            </p>
+
+            <h3>
+              GIS &amp; Drone Surveying
+            </h3>
+
+            <p>
+              Academic GIS coursework at Atlantic
+              Technological University and
+              independent exploration of UAV
+              surveying, photogrammetry and
+              geospatial technologies.
+            </p>
+
+            <a href="project-gis.html">
+              View Project →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <p>
+      © 2026 Mbatshi Chris Jr Mudala |
+      Limerick, Ireland
+    </p>
+
+  </footer>
+
+</body>
+</html>
